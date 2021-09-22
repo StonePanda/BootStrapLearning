@@ -1,0 +1,26 @@
+html {
+  height: 100%; }
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #e6e6e6; }
+
+.showbody {
+  flex: 2 1 auto; }
+
+.sidebar {
+  height: 100%; }
+
+@media (max-width: 1399.98px) {
+  .navbar {
+    width: 100%; } }
+
+@media (min-width: 992px) {
+  .sidebar {
+    width: 20%; } }
+
+@media (max-width: 991.98px) {
+  .sidebar {
+    display: none; } }

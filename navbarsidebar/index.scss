@@ -1,0 +1,46 @@
+// Sass使用@mixin指令定义混合宏，并使用@include指令引入
+// required
+@import "bootstrap-5.1.1/scss/functions";
+@import "bootstrap-5.1.1/scss/variables";
+@import "bootstrap-5.1.1/scss/mixins";
+// optional
+@import "bootstrap-5.1.1/scss/mixins/breakpoints";
+
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #e6e6e6;
+}
+
+.showbody{
+    flex: 2 1 auto;
+}
+
+.sidebar{
+    height: 100%;
+}
+// media-breakpoint-down是小于多少多少的时候
+// 如果我想设置的是大于1400px的时候应该做什么,所以是media-breakpoint-up
+@include media-breakpoint-down(xxl){
+    .navbar{
+        // %是根据父对象确定大小
+        width: 100%;
+    }
+}
+
+@include media-breakpoint-up(lg){
+    .sidebar{
+        width: 20%;
+    }
+}
+
+@include media-breakpoint-down(lg){
+    .sidebar{
+        display: none;
+    }
+}
